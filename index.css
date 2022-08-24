@@ -1,0 +1,74 @@
+:root{
+	padding: 0;
+	margin: 0;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.tab1Box,.tab2Box{
+	width: 500px;
+	height: 160px;
+	border: 1px solid #686868;
+	margin-top: 30px;
+	box-sizing: border-box;
+	padding: 10px;
+}
+.tab1Box .tab1-navBox{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	column-gap: 0.2rem;
+	border-bottom: 1px solid #ca0923;
+}
+.tab1Box .tab1-navBox .tab1-nav{
+	width: 60px;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+}
+.tab1Box .tab1-navBox .active{
+	background: #ca0923;
+	border-radius: 4px 4px 0 0;
+	color: #fff;
+}
+.tab1-contBox{
+	width: 100%;
+	
+}
+.tab1-contBox .tab1-cont{
+	display: none;
+	padding-top: 20px;
+}
+.tab1-contBox .active{
+	display: block;
+}
+.tab1-contBox .active2{
+	animation: moveToLeft 0.5s linear;
+	display: block;
+}
+
+
+@keyframes moveToLeft {
+	0%{
+		margin-left: 100%;
+		opacity: 0;
+	}
+	100%{
+		margin-left: 0;
+		opacity: 1;
+	}
+}
+@keyframes moveToRight {
+	0%{
+		margin-left: 0;
+		
+	}
+	100%{
+		margin-left: 100%;
+		
+	}
+}
